@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-using Xamarin.Forms;
-
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace XFSharedLibraryApp
 {
     public partial class SimpleXAMLContentPage : ContentPage
@@ -11,34 +10,8 @@ namespace XFSharedLibraryApp
         {
             InitializeComponent();
 
-            var label = new Label
-            {
-                Text = "This is my label",
-                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-                FontAttributes = FontAttributes.Bold
-            };
-
-            var entry = new Entry
-            {
-                Placeholder = "Type something here"
-            };
-
-            var button = new Button
-            {
-                Text = "Click Me!"
-            };
             button.Clicked += (sender, e) => {
-                label.Text = "User typed: " + entry.Text;
-            };
-
-            Content = new StackLayout {
-                Padding = 30,
-                Spacing = 10,
-                Children = {
-                    label,
-                    entry,
-                    button
-                }
+                label.Text = "User typed: " + entry.Text;       
             };
         }
     }

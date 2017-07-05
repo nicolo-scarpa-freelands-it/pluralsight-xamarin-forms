@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XFSharedLibraryApp.SimpleXAMLContentPage">
 	<ContentPage.Content>
+        <StackLayout
+            Padding="30"
+            Spacing="10">
+            <Label
+                Text="This is my label"
+                FontSize="Large"
+                x:Name="label"/>
+            <Entry
+                Placeholder="Type something here"
+                x:Name="entry"/>
+            <Button
+                Text="Click Me!"
+                x:Name="button"/>
+        </StackLayout>
 	</ContentPage.Content>
 </ContentPage>
